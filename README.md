@@ -22,7 +22,7 @@ where,
 
 $​G_t$: Glucose level at time t
 
-​ $\theta$: The rate of mean reversion (decay constant)
+​   $\theta$: The rate of mean reversion (decay constant)
 
 $​\mu$: The target setpoint (90 mg/dL)
 
