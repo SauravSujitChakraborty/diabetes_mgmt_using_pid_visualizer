@@ -20,13 +20,14 @@ Modeling an Artificial Pancreas Via Closed-Loop Feedback & Stochastic Shocks
 
 where,
 
-$​G_t$: Glucose level at time t
-
-$\theta$: The rate of mean reversion (decay constant)
-
-$​\mu$: The target setpoint (90 mg/dL)
-
-$​dS_t$: The exogenous shock (The Meal Spike)
+$$
+\begin{aligned}
+G_t \quad &: \text{Glucose level at time } t \\
+\theta \quad &: \text{The rate of mean reversion (decay constant)} \\
+\mu \quad &: \text{The target setpoint (90 mg/dL)} \\
+dS_t \quad &: \text{The exogenous shock (The Meal Spike)}
+\end{aligned}
+$$
 
 B. The Control Signal (PID Equation)
 
