@@ -13,15 +13,20 @@ Modeling an Artificial Pancreas Via Closed-Loop Feedback & Stochastic Shocks
 ​2. Mathematical Framework
 
 ​A. The System Dynamics (Mean Reversion)
+
 ​The baseline glucose behavior is modeled as a Mean-Reverting Process (similar to the Ornstein-Uhlenbeck Process). It assumes that without external interference, biological systems naturally drift back toward a setpoint.
 
  $$ dG_t = \theta (\mu - G_t)dt + dS_t $$
 
 where,
-$​G_t$: Glucose level at time t.
-​$\theta$: The rate of mean reversion (decay constant).
-$​\mu$: The target setpoint (90 mg/dL).
-$​dS_t$: The exogenous shock (The Meal Spike).
+
+$​G_t$: Glucose level at time t
+
+​$\theta$: The rate of mean reversion (decay constant)
+
+$​\mu$: The target setpoint (90 mg/dL)
+
+$​dS_t$: The exogenous shock (The Meal Spike)
 
 B. The Control Signal (PID Equation)
 
@@ -29,8 +34,9 @@ The controller calculates the Error $e(t) = G_t - \mu$ The insulin output $u(t)$
 
 $$ u(t) = K_p e(t) + K_i \int_{0}^{t} e(\tau) d\tau + K_d \frac{de(t)}{dt} $$
 
-i)v​Proportional Term $(K_p)$: Reacts to the current error. If glucose is high, $u(t)$ increases immediately.
-​Integral Term $(K_i)$: Accumulates past error. This ensures that even small, persistent deviations are eliminated, preventing "Steady-State Offset."
+i) Proportional Term $(K_p)$: Reacts to the current error. If glucose is high, $u(t)$ increases immediately.
+
+ii) ​Integral Term $(K_i)$: Accumulates past error. This ensures that even small, persistent deviations are eliminated, preventing "Steady-State Offset."
 
 ii) ​Derivative Term $(K_d)$: Predicts future error by calculating the slope. This "dampens" the system, preventing the insulin from over-correcting and causing a hypoglycemic crash.
 
@@ -45,7 +51,7 @@ iii)Actuator: In Medicine, it is Insulin Injection; in Finance, it is Buying/Sel
 
 This project demonstrates that the mathematics of biological homeostasis and financial risk management are functionally identical: both are Feedback Control Loops designed to minimize variance against stochastic noise.
 
-5. Simulation Results & Visualization
+4. Simulation Results & Visualization
    
 The simulation tracks two primary metrics:
 
@@ -55,6 +61,6 @@ ii)The Control Effort: The rate of insulin delivery required to dampen the post-
 
 The visualization confirms that the system is Critically Damped—it returns to the target setpoint as fast as possible without oscillating (swinging up and down) or overshooting.
 
-6. Mathematical Tools
+5. Mathematical Tools
    
 Discrete-time PID approximation using the Euler Method for differential equations.
