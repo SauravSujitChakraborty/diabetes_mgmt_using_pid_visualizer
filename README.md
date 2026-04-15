@@ -85,7 +85,7 @@ ii)The Control Effort: The rate of insulin delivery required to dampen the post-
 
 ==> Clone the repository and install the dependencies:
 
-bash
+```bash
 
 pip install numpy matplotlib pandas
 
