@@ -83,9 +83,13 @@ ii)The Control Effort: The rate of insulin delivery required to dampen the post-
 
 7. Installation
 
-==> Clone the repository and install the dependencies:
+==> Cloning the repository :
 
 ```bash
+git clone [https://github.com/SauravSujitChakraborty/diabetes_mgmt_using_pid_visualizer.git](https://github.com/SauravSujitChakraborty/diabetes_mgmt_using_pid_visualizer.git)
 
+==> Installing the dependencies :
+
+```bash
 pip install numpy matplotlib pandas
 
