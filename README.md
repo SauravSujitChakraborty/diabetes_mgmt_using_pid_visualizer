@@ -82,17 +82,17 @@ ii)The Control Effort: The rate of insulin delivery required to dampen the post-
 ==> Pandas (pandas): While not strictly required for the simulation math, it is recommended for logging the clinical metrics (Peak G, Time-to-Target) into structured DataFrames for batch analysis.
 
 7. Installation
-
-==> Cloning the repository :
+   
+==> Cloning the repository:
 
 ```bash
 git clone [https://github.com/SauravSujitChakraborty/diabetes_mgmt_using_pid_visualizer.git](https://github.com/SauravSujitChakraborty/diabetes_mgmt_using_pid_visualizer.git)
-
+```
 
 ==> Installing the dependencies :
 
 ```bash
 pip install numpy matplotlib pandas
-
+```
 
 
